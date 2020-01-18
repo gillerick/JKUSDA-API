@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="JKUSDA, JkUSDA Realtime, Mission, Camp Meeting, Seventh-day Adventist Church, SDA, JKUAT,
+Jomo Kenyatta University, church"/>
+	<title>JKUSDA | Fundraisers</title>
+    <!-- CSS  -->
+    <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css" />
+    <link href="css/effects.css" media="screen,projection" rel="stylesheet" type="text/css" />
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <div class="header1" id="myHeader" style="white-space:nowrap; padding-top: 2px; border-bottom: 1.5px solid #03a9f5;">
+        <img src="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png" style="width: 15%; height: 15%; ">
+        <!-- <h2 style="display: inline; font-size: 190%; color: #03a9f5; font-family: Verdana, Geneva, Tahoma, sans-serif; vertical-align: 70%;">JKUSDA</h2><h4 style="font-size: 90%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; vertical-align: 180%; display: inline; color: #03a9f5;">Fundraisers</h4> -->
+    </div>
+    
+<div class="header" style="padding-top: 0;">
+    
+    <div class="slideshow" style="padding-bottom: 0px;">
+          <div class="mySlides">
+              <img src="https://i.ibb.co/JtWT33k/Whats-App-Image-2020-01-06-at-21-05-46-1.jpg" class="responsive-img" style="width: 100%;">
+          </div>
+                  
+        </div>
+</div>
+
+<div class="slideshow-container">
+
+    <div class="Slides">
+        <ul style="list-style-type: none;">
+            <li class="light-1" style="text-align: center; font-size: 1.9em;" >GANZE FOLLOW-UP</li><br>
+            <!-- <li class="center light-blue-text"><i class="material-icons" style="font-size: 20px;">money</i></li> -->
+            <li class="light" style="text-align: center; font-size: 1.5em;" id="missionTotal"></li>
+            <div id="progress" class="progress">
+                <div id="progressBar" class="determinate light-blue" style="width: 0%;   background-color: #07187a"></div>
+            </div>
+             <li class="center light-blue-text"><i class="material-icons" style="font-size: 20px;">people_alt</i></li>
+            <li class="light" style="text-align: center; font-size: 1.5em;" id="missionContributors"><li>
+           
+            <li class=""light-2" style="text-align: center; font-size: 1.2em; font-style: normal;" id="missionL"></li>
+            <br>
+            <a class="waves-effect waves-light btn-small light-blue" href="https://api.jkusdachurch.org/fundraisers/mission">VIEW FUNDRAISER</a>
+        </ul>
+    </div>
+    
+    <div class="Slides">        
+        <ul style="list-style-type: none;">
+            <li class="light-1" style="text-align: center; font-size: 1.9em; font-family: 'Public Sans';" >FINALISTS 2020</li><br>
+            <!-- <li class="center orange-text"><i class="material-icons" style="font-size: 20px;">money</i></li> -->
+            <li class="light" style="text-align: center; font-size: 1.5em;" id="finalistsTotal"></li>
+            <div id="progress1" class="progress">
+                <div id="progressBar1" class="determinate orange" style="width: 0%"></div>
+            </div>
+            <li class="center orange-text"><i class="material-icons" style="font-size: 20px;">people_alt</i></li>
+            <li class="light" style="text-align: center; font-size: 1.5em;" id="finalistsContributors"></li>            
+            <!-- <li class="center orange-text"><i class="material-icons" style="font-size: 20px;">today</i></li> -->
+            <li class="light-2" style="text-align: center; font-size: 1.2em; font-style: normal;" id="finalistsL"></li>
+            <br>
+            <a class="waves-effect waves-light btn-small orange" href="https://api.jkusdachurch.org/fundraisers/finalists">VIEW FUNDRAISER</a>
+        </ul>
+    </div>
+
+
+
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+
+
+<footer class="page-footer" style="background-color: rgb(255, 255, 255, 1);">
+    <div class="container">
+        <div class="row">
+            <div class="col 10 s10">
+                <img src="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png" style="width: 9%; height: 9%; margin-left: 55%;">
+                <p class="orange-text text-lighten-1" style="text-align: center; font-size: small; margin-right: -20%; padding-bottom: 0.7em; vertical-align: 30%;">&copy; 2020 JKUSDA</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+     let figure = document.getElementById("figure");
+
+    setInterval(function() {
+        $.ajax({
+            url: "https://api.jkusdachurch.org/fundraisers/mission/paybill_request.php",
+            type: "GET",
+            processData: false,
+            cache: false,
+            async: true,
+            contentType: "application/json",
+            success: function (response) {
+                let total =  3000+5650;
+                let newdata = JSON.parse(response);
+                let missionSum = parseInt(newdata.sum);
+                let latest_t = parseInt(newdata.Time);
+                let latest_date = newdata.LTime;
+                let total_c = parseInt(newdata.TCount);
+                let target = 500000;
+                let perc = (missionSum/target*100).toFixed(2);
+
+                total += missionSum;
+
+                missionTotal.innerText = "KES " + total.toLocaleString()  + " of KES " + target.toLocaleString();   
+                missionContributors.innerText = total_c;   
+                missionL.innerText = "Last contribution " + (newdata.Timestamp).toLowerCase();       
+            
+
+                //Convert Latest TimeStamp to Date
+                var latest_time = new Date(latest_t*1000).toDateString().slice(0,10);
+                var now = (new Date().getTime())/1000;
+                now  = parseInt(Math.round(now));
+
+
+                total = 3000+5650;
+
+                //Progress bar
+                const progress = {
+                init: function(steps) {
+                    this.advance();
+                },
+                advance: function() {
+                    $('#progressBar').css('width', perc + '%');
+                    if (this.status > 99) {
+                    $('#progress').addClass('hide');
+                    }
+                }
+                };
+
+                // Use with total amount of steps, initialization included
+                progress.init();
+               
+            },
+            error: function (response) {
+            },
+        });
+    },1000);
+
+    setInterval(function() {
+        $.ajax({
+            url: "https://api.jkusdachurch.org/fundraisers/finalists/paybill_request.php",
+            type: "GET",
+            processData: false,
+            contentType: "application/json",
+            cache: false,
+            async: true,
+            success: function (response) {
+                let total =  3500;
+                let newdata = JSON.parse(response);
+                let finalSum = parseInt(newdata.sum);
+                let latest_t = parseInt(newdata.Time);
+                let latest_date = newdata.LTime;
+                let total_c = parseInt(newdata.TCount) + 3;
+                let target = 200000;
+                let perc = finalSum/target*100;
+
+                total += finalSum;
+
+                finalistsTotal.innerText = "KES " + total.toLocaleString() + " of KES " + target.toLocaleString();   
+                finalistsContributors.innerText = total_c;   
+                finalistsL.innerText = "Last contribution " + (newdata.Timestamp).toLowerCase();         
+            
+
+                //Convert Latest TimeStamp to Date
+                var latest_time = new Date(latest_t*1000).toDateString().slice(0,10);
+                var now = (new Date().getTime())/1000;
+                now  = parseInt(Math.round(now));
+
+
+                total = 3500;
+
+                  //Progress bar
+                  const progress = {
+                init: function(steps) {
+                    this.step = 100 / (steps);
+                    this.status = 0;
+                    this.advance();
+                },
+                advance: function() {
+                    this.status += this.step;
+                    $('#progressBar1').css('width', perc + '%');
+                  
+                }
+                };
+
+                // Use with total amount of steps, initialization included
+                progress.init();
+        
+            },
+            error: function (response) {
+            },
+        });
+    },1000);
+
+
+    //Sliding images
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+     
+    }
+
+
+    //Text Carousel
+    var slideIndex = 1;
+    showTextSlides(slideIndex);
+
+    function plusSlides(n) {
+    showTextSlides(slideIndex += n);
+    };
+
+    function currentSlide(n) {
+    showTextSlides(slideIndex = n);
+    }
+
+    function showTextSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("Slides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+   }
+
+
+</script>
+</body>
+</html>

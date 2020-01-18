@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="JKUSDA, JkUSDA Realtime, Mission, Camp Meeting, Seventh-day Adventist Church, SDA, JKUAT,
+Jomo Kenyatta University, church"/>
+	<title>JKUSDA | Fundraisers</title>
+    <!-- CSS  -->
+    <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css" />
+    <link href="css/effects.css" media="screen,projection" rel="stylesheet" type="text/css" />
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+    <div class="header1" id="myHeader" style="white-space:nowrap; padding-top: 2px; border-bottom: 1.5px solid #03a9f5;">
+      
+        <img src="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png" style="width: 15%; height: 15%; ">
+        <h2 style="display: inline; font-size: 200%; color: #03a9f5; font-family: Verdana, Geneva, Tahoma, sans-serif; vertical-align: -15%;">JKUSDA</h2><h4 style="font-size: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; vertical-align: 0%; display: inline; color: #03a9f5;">Fundraisers</h4>
+        <div class="navbar" style="display: inline; margin-left: 30%;">
+            <a href="https://api.jkusdachurch.org/fundraisers">Home</a> 
+          </div>
+        <!-- <h2 style="display: inline; font-size: 200%; color: #03a9f5; font-family: Verdana, Geneva, Tahoma, sans-serif; vertical-align: -15%;">JKUSDA</h2><h4 style="font-size: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; vertical-align: 0%; display: inline; color: #03a9f5;">Fundraisers</h4> --> -->
+    </div>
+    
+<div class="header" style="padding-top: 0;">
+    
+    <div class="slideshow-container" style="padding-bottom: 0px;">
+
+          <div class="mySlides">
+              <img src="https://i.ibb.co/JtWT33k/Whats-App-Image-2020-01-06-at-21-05-46-1.jpg" class="responsive-img" style="width: 100%;">
+          </div>
+                  
+        </div>
+
+        <br>
+<div class="info" style="padding-top: -2em;">
+<div class="text-block">
+<h5 class="light center" style="color: #db550c; font-weight: 400; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">GANZE MISSION FOLLOW-UP</h5>
+</div>
+
+
+</div>
+<div></div>
+</div>
+
+<div style class="container" style="padding-bottom: 2em;">
+<div class="section">
+<div class="row">
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">money</i></h2>
+
+<h5 class="center" id="figure"></h5>
+
+<ul style="list-style-type: none;">
+	<li class="light" id="fig_perc" style="text-align: center; font-size: 1.5em;"></li>
+	<li class="light" id="h" style="text-align: center; font-size: 1.2em;">TOTAL CONTRIBUTED</li>
+</ul>
+</div>
+</div>
+
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">today</i></h2>
+
+<h5 class="center" id="today"></h5>
+<p class="light" id="today_tag" style="text-align: center; font-size: 1.2em ;">CONTRIBUTED TODAY</p>
+</div>
+</div>
+
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">person_add</i></h2>
+
+<h5 class="center" id="contributor"></h5>
+
+<ul style="list-style-type: none;">
+	<!-- <li class="light" id="contribution" style="text-align: center; font-size: 2em;"></li> -->
+	<!-- <li id="contribution" style="text-align: center; font-size: 2em; font-weight: 300;"></li> -->
+    <li style="text-align: center; font-size: 1.2em; font-weight: 300;">LATEST CONTRIBUTOR</li>
+    <li class="light" id="duration" style="text-align: center; font-style: italic;"></li>
+</ul>
+</div>
+</div>
+
+<!-- <div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">loyalty</i></h2>
+
+<h5 class="center" id="pL"></h5>
+
+<ul style="list-style-type: none;"><-<li id="pF" style="text-align: center; font-size: 2em; color: green;" class="light"></li>-->
+	<!-- <li class="light" id="pL_perc" style="text-align: center; font-size: 1.5em;"></li>
+	<li class="light" style="text-align: center; font-size: 1.2em;">PLEDGES</li>
+</ul>
+</div>
+</div> -->
+
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">exposure_neg_1</i></h2>
+
+<h5 class="center" id="deficit"></h5>
+
+<ul style="list-style-type: none;">
+	<li class="light" id="deficit_per" style="text-align: center; font-size: 1.5em;"></li>
+	<li class="light" style="text-align: center; font-size: 1.2em;">DEFICIT</li>
+</ul>
+</div>
+</div>
+
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">people_alt</i></h2>
+
+<h5 class="center" id="total_p"></h5>
+
+<ul style="list-style-type: none;">
+    <li class="light" style="text-align: center; font-size: 1.2em;">CONTRIBUTORS</li>
+    <li class="light" id="p_count_month" style="text-align: center; font-size: 1.2em;"></li>
+    <li class="light" id="p_count" style="text-align: center; font-size: 1.2em;"></li>
+    
+</ul>
+</div>
+</div>
+
+<div class="col s12 m4">
+<div class="icon-block">
+<h2 class="center light-blue-text"><i class="material-icons" style="font-size: 150px;">card_giftcard</i></h2>
+<!-- <h5 class="center">Support Ganze</h5> -->
+<p class="light" style="text-align: center; font-size: 2em;">PAYBILL NO: <strong>508123</strong><br />
+ACCOUNT NO/NAME: <strong>Ganze Mission</strong></p>
+<ul style="list-style-type: none;">
+   <li class="light" style="text-align: center; font-size: 1.2em;">SUPPORT GANZE MISSION FOLLOW-UP</li>
+   <br>
+   <li class="light flow-text" style="text-align: center; font-size: 1.1em;">There is really greater necessity for a second effort than for the first to get the points distinct and the ideas fixed in the minds of the people of Ganze. You can support the Ganze Mission follow up effort.</li> 
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+&nbsp;
+
+</div>
+
+<footer class="page-footer" style="background-color: rgb(255, 255, 255, 1);">
+    <div class="container">
+        <div class="row">
+            <div class="col 10 s10">
+                <img src="https://i.ibb.co/mJVbt4F/adventist-symbol-tm-circle-campfire.png" style="width: 9%; height: 9%; margin-left: 55%;">
+                <p class="orange-text text-lighten-1" style="text-align: center; font-size: small; margin-right: -20%; padding-bottom: 0.7em; vertical-align: 30%;">&copy; 2020 JKUSDA</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+                
+    //Get current Month name
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    var d = new Date();
+    var this_month = monthNames[d.getMonth()];
+
+
+    let figure = document.getElementById("figure");
+
+    setInterval(function() {
+        $.ajax({
+            url: "paybill_request.php",
+            type: "GET",
+            processData: false,
+            contentType: "application/json",
+            success: function (response) {
+                let total =  3000+5650;
+                let newdata = JSON.parse(response);
+                let newDB = parseInt(newdata.sum);
+                let p_today = parseInt(newdata.PCount);
+                let p_yester = parseInt(newdata.PYester);
+                let latest_t = parseInt(newdata.Time);
+                let latest_date = newdata.LTime;
+                let total_c = parseInt(newdata.TCount);
+                let p_month = parseInt(newdata.PMonth);
+                let target = 500000;
+                let pFulfilled = 0;
+                let pTotal = 0;
+
+                dev = parseInt(newdata.latest);
+                m = newdata.member;
+                m1 = newdata.member1;
+                total += newDB;
+                p = parseInt(newdata.Pledges);
+                let today_sum = parseInt(newdata.Today);
+                let yester_sum = parseInt(newdata.Jana);
+                // console.log(newdata.Timestamp);
+
+                figure.innerText = "KES " + total.toLocaleString();
+                fig_perc.innerText = (total/target*100).toFixed(0) + "%";
+                total_p.innerText = total_c;
+    
+
+                if (today_sum > 0){
+
+                today.innerText = "KES " + today_sum.toLocaleString();
+                today_tag.innerText = "CONTRIBUTED TODAY";
+                p_count.innerText = p_today + " • Today";
+                }
+
+                
+                else if (today_sum =! NaN){
+
+                today_tag.innerText = "CONTRIBUTED YESTERDAY";
+                today.innerText = "KES " + yester_sum.toLocaleString();
+                p_count.innerText = p_yester + " • Yesterday";
+                }
+
+                else if (yester_sum =! NaN){
+                today_tag.innerText = latest_time;
+                p_count.innerText = "";
+                }
+
+                var leo = new Date().toJSON().slice(0,10);
+                if (leo == '2020-01-18'){
+                    today.innerText = "KES " + (today_sum+3000+5650).toLocaleString();
+
+                }
+
+
+           
+                var l = m.length;
+
+                if (l < 3){
+                    contributor.innerText = m1.split()[0] + " • KES " + dev.toLocaleString();
+                }
+                else{
+                    contributor.innerText = m.split()[0] + " • KES " + dev.toLocaleString();
+                }
+
+                //Convert Latest TimeStamp to Date
+                var latest_time = new Date(latest_t*1000).toDateString().slice(0,10);
+                // console.log(today_sum);
+                // contribution.innerText = "KES " + dev.toLocaleString();
+                deficit.innerText = "KES " + (target - total).toLocaleString();
+                deficit_per.innerText = ((target - total)/target*100).toFixed(0) + "%";
+                duration.innerText = newdata.Timestamp;
+                // pL.innerText = "KES " + (pTotal-pFulfilled-p).toLocaleString();
+                // pL_perc.innerText = ((pTotal-pFulfilled-p)/target*100).toFixed(0) + "%";
+                p_count_month.innerText = p_month =! NaN ? p_month + " • " + this_month : p_month + " • Last Month";
+
+                var now = (new Date().getTime())/1000;
+                now  = parseInt(Math.round(now));
+
+
+                total = 3000+5650;
+
+            },
+            error: function (response) {
+            },
+        });
+    },1000);
+
+    //Sliding images
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 10000); 
+    }
+
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+  }
+}
+
+
+
+</script>
+</body>
+</html>
