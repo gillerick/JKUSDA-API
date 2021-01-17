@@ -1,9 +1,9 @@
 <?php
 
-$server = "localhost";
-$user = "jkusdach_root";
-$pwd = "X\$X@E2#Nwc!=";
-$db = "jkusdach_db";
+$server = {servername};
+$user = {username};
+$pwd = {password};
+$db = {database};
 
 
 $leo = date("ymd", time());
